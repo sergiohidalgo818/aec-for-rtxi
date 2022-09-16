@@ -1,3 +1,14 @@
+
+# Active Electrode Compensation (AEC) module for RTXI
+
+This module implemets the AEC method from Brette et al. (2008)
+
+- A RTXI module to inject white noise in the system is included and obtain the data necessary for the calibration process
+- The calibration is done in python, with a code also included. This calibration creates a kernel file
+- Finally, the AEC module can be used with the calculated kernel
+
+## How to use it
+
 ### Data for train
 - Using RTXI and our white noise module:
   - Insert white noise and read the voltage
@@ -17,7 +28,7 @@
 ### Use
 - The calculated kernel is in ```aec_kernel.txt```
 - Move the kernel file to the AEC module folder
-- Open the AEC module in RTXI and load the kernel
+- Open the AEC module in RTXI
 - Connect AEC module input and output
 
 ### Credits

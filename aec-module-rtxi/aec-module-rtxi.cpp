@@ -26,6 +26,9 @@
 #include <main_window.h>
 #include <math.h>
 
+#include <fstream>
+#include <sstream>
+
 extern "C" Plugin::Object*
 createRTXIPlugin(void)
 {
@@ -62,7 +65,10 @@ AecModuleRtxi::~AecModuleRtxi(void)
 void
 AecModuleRtxi::execute(void)
 {
-  output(0) = input(0)-conv(input(1), kernel)[0];
+  std::vector<double> input_vector{};
+  input_vector.push_back(input(1));
+
+  output(0) = input(0)-conv(input_vector, kernel)[0];
   return;
 }
 
@@ -77,13 +83,15 @@ AecModuleRtxi::update(DefaultGUIModel::update_flags_t flag)
   switch (flag) {
     case INIT:
       period = RT::System::getInstance()->getPeriod() * 1e-6; // ms
-      read_kernel();
+      kernel = read_kernel();
       break;
 
     case MODIFY:
+      kernel = read_kernel();
       break;
 
     case UNPAUSE:
+      kernel = read_kernel();
       break;
 
     case PAUSE:
@@ -121,7 +129,7 @@ conv(std::vector<T> const &f, std::vector<T> const &g) {
   return out; 
 }
 
-void
+std::vector<double>
 read_kernel(){
   std::vector<double> new_kernel{};
 
@@ -139,6 +147,6 @@ read_kernel(){
         new_kernel.push_back(read_val_2);
   }
 
-  kernel=new_kernel;
+  return new_kernel;
 }
 

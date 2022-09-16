@@ -42,7 +42,11 @@ protected:
 private:
 
   std::vector<double> kernel;
+  std::vector<double> read_kernel();
 
+  template<typename T> std::vector<T> conv(std::vector<T> const &f, std::vector<T> const &g);
+
+  double period;
   void initParameters();
 
 private slots:
