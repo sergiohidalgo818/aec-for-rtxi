@@ -52,21 +52,21 @@ int main() {
   /***************/
 	/* CONVOLUCION */
 	/***************/
-  //std::vector<double> v_cov = conv(f, kernel);
-  //for(auto i : v_cov) std::cout << i << " ";
-  //std::cout << std::endl << std::endl;
+  std::vector<double> v_cov = conv(f, kernel);
+  for(auto i : v_cov) std::cout << i << " ";
+  std::cout << std::endl << std::endl;
 
 	/*********************************/
 	/* CONVOLUCION TAMAÑO CORREGUIDO */
 	/*********************************/
-	//std::vector<double> v_cov2 = std::vector<double>(v_cov.begin(), v_cov.end()-(f.size()-1));
-	//for(auto i : v_cov2) std::cout << i << " ";
-  //std::cout << std::endl  << std::endl;
+	std::vector<double> v_cov2 = std::vector<double>(v_cov.begin(), v_cov.end()-(f.size()-1));
+	for(auto i : v_cov2) std::cout << i << " ";
+    std::cout << std::endl  << std::endl;
 
 	/************************/
 	/* CONVOLUCION UN VALOR */
 	/************************/
-  double result = 0-conv(f, kernel)[0];
-  std::cout << "\nCheck value:\n" << result << std::endl;
+  //double result = 0.1-conv(f, kernel)[1];
+  //std::cout << "\nCheck value:\n" << result << std::endl;
 } 
 
