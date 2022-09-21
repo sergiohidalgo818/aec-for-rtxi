@@ -83,7 +83,7 @@ except:
 #################################
 ### Trial Selection for Train ###
 #################################
-i=4
+i=5
 trial = "Trial"+str(i)
 struct = '/'+trial+'/Synchronous Data/Channel Data'
 dset = f[struct]
@@ -91,8 +91,8 @@ dset = f[struct]
 data = dset[()]
 res = data[:,columns].T
 
-c_whitenoise = res[0]
-v_recorded   = res[1]
+c_whitenoise = res[1]
+v_recorded   = res[0]
 
 #############
 ### Train ###
@@ -117,6 +117,8 @@ plt.show()
 ###################
 ke.tofile('aec_kernel.txt', sep='\n', format='%s')
 
+
+'''
 #################################
 ### Trial Selection for Test ###
 #################################
@@ -137,7 +139,7 @@ v_recorded      = res[1]
 v_compensed = aec.AEC_compensate(v_recorded, c_periodicnoise, ke)
 
 plt.title("Test")
-plt.plot(v_compensed    ,  alpha=1.0, label='Compensated V')
+plt.plot(v_compensed    , alpha=1.0, label='Compensated V')
 plt.plot(v_recorded     , alpha=0.8, label='Recorded V')
 plt.plot(c_periodicnoise, alpha=0.3, label='Inserted C')
 plt.legend()
@@ -149,3 +151,4 @@ plt.show()
 v_compensed = aec.AEC_compensate([0.1], [1,2,3,4], ke)
 print('\nCheck value:')
 print(v_compensed)
+'''

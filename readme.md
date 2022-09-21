@@ -3,33 +3,34 @@
 
 This module implemets the AEC method from Brette et al. (2008)
 
-- A RTXI module to inject white noise in the system is included and obtain the data necessary for the calibration process
+- A RTXI module to inject white noise in the system and obtain the data for the calibration is also included 
 - The calibration is done in python, with a code also included. This calibration creates a kernel file
-- Finally, the AEC module can be used with the calculated kernel
+- Finally, the AEC module can be used with the calculated electrode kernel
 
 ## How to use it
 
 ### Data for train
-- Using RTXI and our white noise module:
-  - Insert white noise and read the voltage
-  - Save the data using RTXI
-
-### Data for test
-- Using RTXI and the wave generator (¿included?):
-  - Insert a periodic signal and read the voltage
-  - Save the data in another trial of the same data file
+- Install our white noise module:
+```cd white-noise-module-rtxi && sudo make install```
+- Insert white noise & read the voltage
+- Save the data (recorded voltage & white noise injection)
+- Our RTXI workspace is included (white_generator.set)
 
 ### Calculating the kernel
+- Run the following code to generate the electrode kernel
 ```py aec_train.py -p file.h5 -m intra```
 
-### Checking c++ convolution
+- The c++ convolution code used in RTXI can be tested standalone using:
 ```g++ -std=c++1y -O3 -Wall -pedantic -pthread convolution_test.cpp && ./a.out```
 
-### Use
+### Using the AEC module
 - The calculated kernel is in ```aec_kernel.txt```
-- Move the kernel file to the AEC module folder
+- Check ```aec-module-rtxi/aec-module-rtxi.cpp``` line 151 and write your kernel path
+- Install our AEC module:
+```cd aec-module-rtxi && sudo make install```
 - Open the AEC module in RTXI
-- Connect AEC module input and output
+- Connect AEC module inputs (recorded voltage & current injection) and output (clean voltage)
+- Our RTXI workspace is included (aec_test.set)
 
-### Credits
+## Credits
 Brette, R., Piwkowska, Z., Monier, C., Rudolph-Lilith, M., Fournier, J., Levy, M., Frégnac, Y., Bal, T., Destexhe, A. (2008). High-resolution intracellular recordings using a real-time computational model of the electrode. Neuron, 59(3), 379-391.

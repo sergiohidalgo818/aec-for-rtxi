@@ -21,6 +21,7 @@
 #include <iostream>
 #include <main_window.h>
 #include <math.h>
+#include <deque>
 
 #include <fstream>
 #include <sstream>
@@ -63,12 +64,17 @@ AecModuleRtxi::~AecModuleRtxi(void)
 void
 AecModuleRtxi::execute(void)
 {
-  std::vector<double> input_vector{};
-  input_vector.push_back(input(1)*current_scale);
+  currents.push_back(input(1)*current_scale);
 
-  aux=conv(input_vector, kernel)[0];
+  if(currents.size()>kernel.size()+1){
+    currents.pop_front();
 
-  output(0) = input(0)-conv(input_vector, kernel)[0];
+    conv_result_full  = conv(kernel, currents);
+    conv_result_clean = std::vector<double>(conv_result_full.begin(), conv_result_full.end()-(kernel.size()-1));
+
+    aux = conv_result_clean[conv_result_clean.size()-1];
+    output(0) = input(0) - aux;
+  }
 
   return;
 }
@@ -76,7 +82,6 @@ AecModuleRtxi::execute(void)
 void
 AecModuleRtxi::initParameters(void)
 {
-
 	current_scale=1;
 }
 
@@ -98,6 +103,7 @@ AecModuleRtxi::update(DefaultGUIModel::update_flags_t flag)
 
     case UNPAUSE:
       kernel = read_kernel();
+      currents.clear();
       break;
 
     case PAUSE:
@@ -119,7 +125,7 @@ AecModuleRtxi::customizeGUI(void)
 }
 
 template<typename T> std::vector<T>
-AecModuleRtxi::conv(std::vector<T> const &f, std::vector<T> const &g) {
+AecModuleRtxi::conv(std::vector<T> const &f, std::deque<T> const &g) {
   int const nf = f.size();
   int const ng = g.size();
   int const n  = nf + ng - 1;

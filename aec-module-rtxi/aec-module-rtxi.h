@@ -17,6 +17,7 @@
  */
 
 #include <default_gui_model.h>
+#include <deque>
 
 class AecModuleRtxi : public DefaultGUIModel
 {
@@ -36,10 +37,17 @@ class AecModuleRtxi : public DefaultGUIModel
 
     std::vector<double> kernel;
     std::vector<double> read_kernel();
+
+    std::deque<double> currents;
+
+    std::vector<double> conv_result_full;
+    std::vector<double> conv_result_clean;
+
     double aux;
     double current_scale;
 
-    template<typename T> std::vector<T> conv(std::vector<T> const &f, std::vector<T> const &g);
+
+    template<typename T> std::vector<T> conv(std::vector<T> const &f, std::deque<T> const &g);
 
     double period;
     void initParameters();

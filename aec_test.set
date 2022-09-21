@@ -1,0 +1,258 @@
+<RTXI version="2.2" class="settings">
+ <OBJECT component="rt" id="0">
+  <PARAM name="Period">100000</PARAM>
+ </OBJECT>
+ <OBJECT component="io" id="1">
+  <PARAM name="0 Destination ID">13</PARAM>
+  <PARAM name="0 Destination channel">0</PARAM>
+  <PARAM name="0 Source ID">15</PARAM>
+  <PARAM name="0 Source channel">0</PARAM>
+  <PARAM name="1 Destination ID">11</PARAM>
+  <PARAM name="1 Destination channel">0</PARAM>
+  <PARAM name="1 Source ID">13</PARAM>
+  <PARAM name="1 Source channel">0</PARAM>
+  <PARAM name="2 Destination ID">11</PARAM>
+  <PARAM name="2 Destination channel">1</PARAM>
+  <PARAM name="2 Source ID">15</PARAM>
+  <PARAM name="2 Source channel">0</PARAM>
+  <PARAM name="Num Links">3</PARAM>
+ </OBJECT>
+ <OBJECT library="analogy_driver.so" component="plugin" id="2">
+  <PARAM name="0">analogy0</PARAM>
+  <PARAM name="Num Devices">1</PARAM>
+  <OBJECT name="0" id="13">
+   <PARAM name="0 AI Active">1</PARAM>
+   <PARAM name="0 AI Calibration Value">0</PARAM>
+   <PARAM name="0 AI Downsample">1</PARAM>
+   <PARAM name="0 AI Gain">0.01</PARAM>
+   <PARAM name="0 AI Range">0</PARAM>
+   <PARAM name="0 AI Reference">0</PARAM>
+   <PARAM name="0 AI Units">0</PARAM>
+   <PARAM name="0 AI Zero Offset">0</PARAM>
+   <PARAM name="0 AO Active">1</PARAM>
+   <PARAM name="0 AO Calibration Value">0</PARAM>
+   <PARAM name="0 AO Gain">1</PARAM>
+   <PARAM name="0 AO Range">0</PARAM>
+   <PARAM name="0 AO Reference">0</PARAM>
+   <PARAM name="0 AO Units">0</PARAM>
+   <PARAM name="0 AO Zero Offset">0</PARAM>
+   <PARAM name="0 DIO Active">0</PARAM>
+   <PARAM name="0 DIO Direction">0</PARAM>
+   <PARAM name="1 AI Active">0</PARAM>
+   <PARAM name="1 AI Calibration Value">0</PARAM>
+   <PARAM name="1 AI Downsample">1</PARAM>
+   <PARAM name="1 AI Gain">1</PARAM>
+   <PARAM name="1 AI Range">0</PARAM>
+   <PARAM name="1 AI Reference">0</PARAM>
+   <PARAM name="1 AI Units">0</PARAM>
+   <PARAM name="1 AI Zero Offset">0</PARAM>
+   <PARAM name="1 AO Active">0</PARAM>
+   <PARAM name="1 AO Calibration Value">0</PARAM>
+   <PARAM name="1 AO Gain">1</PARAM>
+   <PARAM name="1 AO Range">0</PARAM>
+   <PARAM name="1 AO Reference">0</PARAM>
+   <PARAM name="1 AO Units">0</PARAM>
+   <PARAM name="1 AO Zero Offset">0</PARAM>
+   <PARAM name="1 DIO Active">0</PARAM>
+   <PARAM name="1 DIO Direction">0</PARAM>
+   <PARAM name="10 AI Active">0</PARAM>
+   <PARAM name="10 AI Calibration Value">0</PARAM>
+   <PARAM name="10 AI Downsample">1</PARAM>
+   <PARAM name="10 AI Gain">1</PARAM>
+   <PARAM name="10 AI Range">0</PARAM>
+   <PARAM name="10 AI Reference">0</PARAM>
+   <PARAM name="10 AI Units">0</PARAM>
+   <PARAM name="10 AI Zero Offset">0</PARAM>
+   <PARAM name="11 AI Active">0</PARAM>
+   <PARAM name="11 AI Calibration Value">0</PARAM>
+   <PARAM name="11 AI Downsample">1</PARAM>
+   <PARAM name="11 AI Gain">1</PARAM>
+   <PARAM name="11 AI Range">0</PARAM>
+   <PARAM name="11 AI Reference">0</PARAM>
+   <PARAM name="11 AI Units">0</PARAM>
+   <PARAM name="11 AI Zero Offset">0</PARAM>
+   <PARAM name="12 AI Active">0</PARAM>
+   <PARAM name="12 AI Calibration Value">0</PARAM>
+   <PARAM name="12 AI Downsample">1</PARAM>
+   <PARAM name="12 AI Gain">1</PARAM>
+   <PARAM name="12 AI Range">0</PARAM>
+   <PARAM name="12 AI Reference">0</PARAM>
+   <PARAM name="12 AI Units">0</PARAM>
+   <PARAM name="12 AI Zero Offset">0</PARAM>
+   <PARAM name="13 AI Active">0</PARAM>
+   <PARAM name="13 AI Calibration Value">0</PARAM>
+   <PARAM name="13 AI Downsample">1</PARAM>
+   <PARAM name="13 AI Gain">1</PARAM>
+   <PARAM name="13 AI Range">0</PARAM>
+   <PARAM name="13 AI Reference">0</PARAM>
+   <PARAM name="13 AI Units">0</PARAM>
+   <PARAM name="13 AI Zero Offset">0</PARAM>
+   <PARAM name="14 AI Active">0</PARAM>
+   <PARAM name="14 AI Calibration Value">0</PARAM>
+   <PARAM name="14 AI Downsample">1</PARAM>
+   <PARAM name="14 AI Gain">1</PARAM>
+   <PARAM name="14 AI Range">0</PARAM>
+   <PARAM name="14 AI Reference">0</PARAM>
+   <PARAM name="14 AI Units">0</PARAM>
+   <PARAM name="14 AI Zero Offset">0</PARAM>
+   <PARAM name="15 AI Active">0</PARAM>
+   <PARAM name="15 AI Calibration Value">0</PARAM>
+   <PARAM name="15 AI Downsample">1</PARAM>
+   <PARAM name="15 AI Gain">1</PARAM>
+   <PARAM name="15 AI Range">0</PARAM>
+   <PARAM name="15 AI Reference">0</PARAM>
+   <PARAM name="15 AI Units">0</PARAM>
+   <PARAM name="15 AI Zero Offset">0</PARAM>
+   <PARAM name="2 AI Active">0</PARAM>
+   <PARAM name="2 AI Calibration Value">0</PARAM>
+   <PARAM name="2 AI Downsample">1</PARAM>
+   <PARAM name="2 AI Gain">1</PARAM>
+   <PARAM name="2 AI Range">0</PARAM>
+   <PARAM name="2 AI Reference">0</PARAM>
+   <PARAM name="2 AI Units">0</PARAM>
+   <PARAM name="2 AI Zero Offset">0</PARAM>
+   <PARAM name="2 DIO Active">0</PARAM>
+   <PARAM name="2 DIO Direction">0</PARAM>
+   <PARAM name="3 AI Active">0</PARAM>
+   <PARAM name="3 AI Calibration Value">0</PARAM>
+   <PARAM name="3 AI Downsample">1</PARAM>
+   <PARAM name="3 AI Gain">1</PARAM>
+   <PARAM name="3 AI Range">0</PARAM>
+   <PARAM name="3 AI Reference">0</PARAM>
+   <PARAM name="3 AI Units">0</PARAM>
+   <PARAM name="3 AI Zero Offset">0</PARAM>
+   <PARAM name="3 DIO Active">0</PARAM>
+   <PARAM name="3 DIO Direction">0</PARAM>
+   <PARAM name="4 AI Active">0</PARAM>
+   <PARAM name="4 AI Calibration Value">0</PARAM>
+   <PARAM name="4 AI Downsample">1</PARAM>
+   <PARAM name="4 AI Gain">1</PARAM>
+   <PARAM name="4 AI Range">0</PARAM>
+   <PARAM name="4 AI Reference">0</PARAM>
+   <PARAM name="4 AI Units">0</PARAM>
+   <PARAM name="4 AI Zero Offset">0</PARAM>
+   <PARAM name="4 DIO Active">0</PARAM>
+   <PARAM name="4 DIO Direction">0</PARAM>
+   <PARAM name="5 AI Active">0</PARAM>
+   <PARAM name="5 AI Calibration Value">0</PARAM>
+   <PARAM name="5 AI Downsample">1</PARAM>
+   <PARAM name="5 AI Gain">1</PARAM>
+   <PARAM name="5 AI Range">0</PARAM>
+   <PARAM name="5 AI Reference">0</PARAM>
+   <PARAM name="5 AI Units">0</PARAM>
+   <PARAM name="5 AI Zero Offset">0</PARAM>
+   <PARAM name="5 DIO Active">0</PARAM>
+   <PARAM name="5 DIO Direction">0</PARAM>
+   <PARAM name="6 AI Active">0</PARAM>
+   <PARAM name="6 AI Calibration Value">0</PARAM>
+   <PARAM name="6 AI Downsample">1</PARAM>
+   <PARAM name="6 AI Gain">1</PARAM>
+   <PARAM name="6 AI Range">0</PARAM>
+   <PARAM name="6 AI Reference">0</PARAM>
+   <PARAM name="6 AI Units">0</PARAM>
+   <PARAM name="6 AI Zero Offset">0</PARAM>
+   <PARAM name="6 DIO Active">0</PARAM>
+   <PARAM name="6 DIO Direction">0</PARAM>
+   <PARAM name="7 AI Active">0</PARAM>
+   <PARAM name="7 AI Calibration Value">0</PARAM>
+   <PARAM name="7 AI Downsample">1</PARAM>
+   <PARAM name="7 AI Gain">1</PARAM>
+   <PARAM name="7 AI Range">0</PARAM>
+   <PARAM name="7 AI Reference">0</PARAM>
+   <PARAM name="7 AI Units">0</PARAM>
+   <PARAM name="7 AI Zero Offset">0</PARAM>
+   <PARAM name="7 DIO Active">0</PARAM>
+   <PARAM name="7 DIO Direction">0</PARAM>
+   <PARAM name="8 AI Active">0</PARAM>
+   <PARAM name="8 AI Calibration Value">0</PARAM>
+   <PARAM name="8 AI Downsample">1</PARAM>
+   <PARAM name="8 AI Gain">1</PARAM>
+   <PARAM name="8 AI Range">0</PARAM>
+   <PARAM name="8 AI Reference">0</PARAM>
+   <PARAM name="8 AI Units">0</PARAM>
+   <PARAM name="8 AI Zero Offset">0</PARAM>
+   <PARAM name="9 AI Active">0</PARAM>
+   <PARAM name="9 AI Calibration Value">0</PARAM>
+   <PARAM name="9 AI Downsample">1</PARAM>
+   <PARAM name="9 AI Gain">1</PARAM>
+   <PARAM name="9 AI Range">0</PARAM>
+   <PARAM name="9 AI Reference">0</PARAM>
+   <PARAM name="9 AI Units">0</PARAM>
+   <PARAM name="9 AI Zero Offset">0</PARAM>
+   <PARAM name="AI Count">16</PARAM>
+   <PARAM name="AO Count">2</PARAM>
+   <PARAM name="DIO Count">8</PARAM>
+  </OBJECT>
+ </OBJECT>
+ <OBJECT library="model_loader.so" component="plugin" id="3"/>
+ <OBJECT library="module_installer.so" component="plugin" id="4"/>
+ <OBJECT library="system_control.so" component="plugin" id="5"/>
+ <OBJECT library="oscilloscope.so" component="plugin" id="6">
+  <PARAM name="Num Panels">1</PARAM>
+  <OBJECT name="0" id="14">
+   <PARAM name="0 ID">11</PARAM>
+   <PARAM name="0 index">0</PARAM>
+   <PARAM name="0 offset">0</PARAM>
+   <PARAM name="0 pen color">#ffa405</PARAM>
+   <PARAM name="0 pen style">1</PARAM>
+   <PARAM name="0 pen width">3</PARAM>
+   <PARAM name="0 scale">0.005</PARAM>
+   <PARAM name="0 type">2</PARAM>
+   <PARAM name="1 ID">13</PARAM>
+   <PARAM name="1 index">0</PARAM>
+   <PARAM name="1 offset">0</PARAM>
+   <PARAM name="1 pen color">#0075dc</PARAM>
+   <PARAM name="1 pen style">1</PARAM>
+   <PARAM name="1 pen width">1</PARAM>
+   <PARAM name="1 scale">0.005</PARAM>
+   <PARAM name="1 type">2</PARAM>
+   <PARAM name="2 ID">15</PARAM>
+   <PARAM name="2 index">0</PARAM>
+   <PARAM name="2 offset">0</PARAM>
+   <PARAM name="2 pen color">#b266ff</PARAM>
+   <PARAM name="2 pen style">1</PARAM>
+   <PARAM name="2 pen width">1</PARAM>
+   <PARAM name="2 scale">0.005</PARAM>
+   <PARAM name="2 type">2</PARAM>
+   <PARAM name="DivT">500</PARAM>
+   <PARAM name="DivX">10</PARAM>
+   <PARAM name="DivY">10</PARAM>
+   <PARAM name="H">741</PARAM>
+   <PARAM name="Num Channels">3</PARAM>
+   <PARAM name="Paused">0</PARAM>
+   <PARAM name="Refresh">250</PARAM>
+   <PARAM name="Size">50002</PARAM>
+   <PARAM name="W">1219</PARAM>
+   <PARAM name="X">536</PARAM>
+   <PARAM name="Y">45</PARAM>
+  </OBJECT>
+ </OBJECT>
+ <OBJECT library="data_recorder.so" component="plugin" id="7">
+  <PARAM name="Num Panels">0</PARAM>
+ </OBJECT>
+ <OBJECT library="connector.so" component="plugin" id="8"/>
+ <OBJECT library="performance_measurement.so" component="plugin" id="9"/>
+ <OBJECT library="userprefs.so" component="plugin" id="10"/>
+ <OBJECT library="aec_module_rtxi.so" component="plugin" id="11">
+  <PARAM name="Aux">0</PARAM>
+  <PARAM name="Current Scale">1</PARAM>
+  <PARAM name="H">157</PARAM>
+  <PARAM name="W">294</PARAM>
+  <PARAM name="X">86</PARAM>
+  <PARAM name="Y">99</PARAM>
+  <PARAM name="paused">0</PARAM>
+ </OBJECT>
+ <OBJECT library="signal_generator.so" component="plugin" id="15">
+  <PARAM name="Amplitude (V)">1</PARAM>
+  <PARAM name="Delay (s)">1</PARAM>
+  <PARAM name="Freq (Hz)">1</PARAM>
+  <PARAM name="H">338</PARAM>
+  <PARAM name="W">294</PARAM>
+  <PARAM name="Width (s)">1</PARAM>
+  <PARAM name="X">83</PARAM>
+  <PARAM name="Y">332</PARAM>
+  <PARAM name="ZAP duration (s)">10</PARAM>
+  <PARAM name="ZAP max Freq (Hz)">20</PARAM>
+  <PARAM name="paused">1</PARAM>
+ </OBJECT>
+</RTXI>
