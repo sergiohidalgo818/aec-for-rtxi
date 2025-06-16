@@ -27,27 +27,39 @@
 #include <math.h>
 #include <random>
 
-extern "C" Plugin::Object*
-createRTXIPlugin(void)
-{
+extern "C" Plugin::Object *createRTXIPlugin(void) {
   return new WhiteNoiseModuleRtxi();
 }
 
 static DefaultGUIModel::variable_t vars[] = {
-  /*Module variables*/
-  {"Min value", "The min output value", DefaultGUIModel::PARAMETER | DefaultGUIModel::DOUBLE,},
-  {"Max value", "The max output value", DefaultGUIModel::PARAMETER | DefaultGUIModel::DOUBLE,},
-  {"Test value","A test value for test", DefaultGUIModel::STATE | DefaultGUIModel::DOUBLE,},
-  {"Out value", "Generated white noise values", DefaultGUIModel::OUTPUT | DefaultGUIModel::DOUBLE,},
+    /*Module variables*/
+    {
+        "Min value",
+        "The min output value",
+        DefaultGUIModel::PARAMETER | DefaultGUIModel::DOUBLE,
+    },
+    {
+        "Max value",
+        "The max output value",
+        DefaultGUIModel::PARAMETER | DefaultGUIModel::DOUBLE,
+    },
+    {
+        "Test value",
+        "A test value for test",
+        DefaultGUIModel::STATE | DefaultGUIModel::DOUBLE,
+    },
+    {
+        "Out value",
+        "Generated white noise values",
+        DefaultGUIModel::OUTPUT | DefaultGUIModel::DOUBLE,
+    },
 };
 
 static size_t num_vars = sizeof(vars) / sizeof(DefaultGUIModel::variable_t);
 
 WhiteNoiseModuleRtxi::WhiteNoiseModuleRtxi(void)
-  : DefaultGUIModel("White Noise Generator", ::vars, ::num_vars),
-    gen_wn(rd_wn()),
-    dis_wn(min_val, max_val)
-{
+    : DefaultGUIModel("White Noise Generator", ::vars, ::num_vars),
+      gen_wn(rd_wn()), dis_wn(min_val, max_val) {
   setWhatsThis("<p><b>WhiteNoise:</b><br>QWhatsThis description.</p>");
   DefaultGUIModel::createGUI(vars,
                              num_vars); // this is required to create the GUI
@@ -59,28 +71,23 @@ WhiteNoiseModuleRtxi::WhiteNoiseModuleRtxi(void)
                 // values
   QTimer::singleShot(0, this, SLOT(resizeMe()));
 
-  //std::random_device rd_wn; // obtain a random number from hardware
-  //std::mt19937 gen_wn(rd_wn()); // seed the generator
-  //std::uniform_real_distribution<double> dis_wn(min_val, max_val); // define the range
+  // std::random_device rd_wn; // obtain a random number from hardware
+  // std::mt19937 gen_wn(rd_wn()); // seed the generator
+  // std::uniform_real_distribution<double> dis_wn(min_val, max_val); // define
+  // the range
 }
 
-WhiteNoiseModuleRtxi::~WhiteNoiseModuleRtxi(void)
-{
-}
+WhiteNoiseModuleRtxi::~WhiteNoiseModuleRtxi(void) {}
 
-void
-WhiteNoiseModuleRtxi::execute(void)
-{
-  decltype(dis_wn.param()) new_range (min_val, max_val);
+void WhiteNoiseModuleRtxi::execute(void) {
+  decltype(dis_wn.param()) new_range(min_val, max_val);
   dis_wn.param(new_range);
   output(0) = dis_wn(gen_wn);
-  //output(0) = 13.5;
+  // output(0) = 13.5;
   return;
 }
 
-void
-WhiteNoiseModuleRtxi::initParameters(void)
-{
+void WhiteNoiseModuleRtxi::initParameters(void) {
   min_val = -0.5;
   max_val = 0.5;
   // double result ;
@@ -89,41 +96,35 @@ WhiteNoiseModuleRtxi::initParameters(void)
   setParameter("Max value", max_val);
 }
 
-void
-WhiteNoiseModuleRtxi::update(DefaultGUIModel::update_flags_t flag)
-{
-
+void WhiteNoiseModuleRtxi::update(DefaultGUIModel::update_flags_t flag) {
 
   switch (flag) {
-    case INIT:
-      period = RT::System::getInstance()->getPeriod() * 1e-6; // ms
-      setParameter("Min value", min_val);
-      setParameter("Max value", max_val);
-      setState("Test value", output(0));
-      break;
+  case INIT:
+    period = RT::System::getInstance()->getPeriod() * 1e-6; // ms
+    setParameter("Min value", min_val);
+    setParameter("Max value", max_val);
+    setState("Test value", output(0));
+    break;
 
-    case MODIFY:
-      min_val = getParameter("Min value").toDouble();
-      max_val = getParameter("Max value").toDouble();
-      break;
+  case MODIFY:
+    min_val = getParameter("Min value").toDouble();
+    max_val = getParameter("Max value").toDouble();
+    break;
 
-    case UNPAUSE:
-      break;
+  case UNPAUSE:
+    break;
 
-    case PAUSE:
-      output(0) = 0;
-      break;
+  case PAUSE:
+    output(0) = 0;
+    break;
 
-    case PERIOD:
-      period = RT::System::getInstance()->getPeriod() * 1e-6; // ms
-      break;
+  case PERIOD:
+    period = RT::System::getInstance()->getPeriod() * 1e-6; // ms
+    break;
 
-    default:
-      break;
+  default:
+    break;
   }
 }
 
-void
-WhiteNoiseModuleRtxi::customizeGUI(void)
-{
-}
+void WhiteNoiseModuleRtxi::customizeGUI(void) {}

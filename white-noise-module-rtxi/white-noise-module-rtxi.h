@@ -24,8 +24,7 @@
 #include <default_gui_model.h>
 #include <random>
 
-class WhiteNoiseModuleRtxi : public DefaultGUIModel
-{
+class WhiteNoiseModuleRtxi : public DefaultGUIModel {
 
   Q_OBJECT
 
@@ -34,14 +33,13 @@ public:
   virtual ~WhiteNoiseModuleRtxi(void);
 
   void execute(void);
-  void createGUI(DefaultGUIModel::variable_t*, int);
+  void createGUI(DefaultGUIModel::variable_t *, int);
   void customizeGUI(void);
 
 protected:
   virtual void update(DefaultGUIModel::update_flags_t);
 
 private:
-
   double period;
   double out_test;
 

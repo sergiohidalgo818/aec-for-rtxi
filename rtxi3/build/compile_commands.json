@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/build/aec-module-rtxi",
+  "command": "/usr/bin/c++ -DFMT_SHARED -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -Daec_module_rtxi_EXPORTS -I/home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/build/aec-module-rtxi/aec-module-rtxi_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/c++/13 -isystem /usr/include/x86_64-linux-gnu/c++/13 -isystem /usr/include/c++/13/backward -isystem /usr/lib/gcc/x86_64-linux-gnu/13/include -isystem /usr/local/include -isystem /usr/include/x86_64-linux-gnu -isystem /usr/include -fPIC -fPIC -o CMakeFiles/aec-module-rtxi.dir/aec-module-rtxi_autogen/mocs_compilation.cpp.o -c /home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/build/aec-module-rtxi/aec-module-rtxi_autogen/mocs_compilation.cpp",
+  "file": "/home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/build/aec-module-rtxi/aec-module-rtxi_autogen/mocs_compilation.cpp",
+  "output": "aec-module-rtxi/CMakeFiles/aec-module-rtxi.dir/aec-module-rtxi_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/build/aec-module-rtxi",
+  "command": "/usr/bin/c++ -DFMT_SHARED -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -Daec_module_rtxi_EXPORTS -I/home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/build/aec-module-rtxi/aec-module-rtxi_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/c++/13 -isystem /usr/include/x86_64-linux-gnu/c++/13 -isystem /usr/include/c++/13/backward -isystem /usr/lib/gcc/x86_64-linux-gnu/13/include -isystem /usr/local/include -isystem /usr/include/x86_64-linux-gnu -isystem /usr/include -fPIC -fPIC -o CMakeFiles/aec-module-rtxi.dir/aec-module-rtxi.cpp.o -c /home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/aec-module-rtxi/aec-module-rtxi.cpp",
+  "file": "/home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/aec-module-rtxi/aec-module-rtxi.cpp",
+  "output": "aec-module-rtxi/CMakeFiles/aec-module-rtxi.dir/aec-module-rtxi.cpp.o"
+},
+{
+  "directory": "/home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/build/white-noise-module-rtxi",
+  "command": "/usr/bin/c++ -DFMT_SHARED -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -Dwhite_noise_module_rtxi_EXPORTS -I/home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/build/white-noise-module-rtxi/white-noise-module-rtxi_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/c++/13 -isystem /usr/include/x86_64-linux-gnu/c++/13 -isystem /usr/include/c++/13/backward -isystem /usr/lib/gcc/x86_64-linux-gnu/13/include -isystem /usr/local/include -isystem /usr/include/x86_64-linux-gnu -isystem /usr/include -fPIC -fPIC -o CMakeFiles/white-noise-module-rtxi.dir/white-noise-module-rtxi_autogen/mocs_compilation.cpp.o -c /home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/build/white-noise-module-rtxi/white-noise-module-rtxi_autogen/mocs_compilation.cpp",
+  "file": "/home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/build/white-noise-module-rtxi/white-noise-module-rtxi_autogen/mocs_compilation.cpp",
+  "output": "white-noise-module-rtxi/CMakeFiles/white-noise-module-rtxi.dir/white-noise-module-rtxi_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/build/white-noise-module-rtxi",
+  "command": "/usr/bin/c++ -DFMT_SHARED -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -Dwhite_noise_module_rtxi_EXPORTS -I/home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/build/white-noise-module-rtxi/white-noise-module-rtxi_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/c++/13 -isystem /usr/include/x86_64-linux-gnu/c++/13 -isystem /usr/include/c++/13/backward -isystem /usr/lib/gcc/x86_64-linux-gnu/13/include -isystem /usr/local/include -isystem /usr/include/x86_64-linux-gnu -isystem /usr/include -fPIC -fPIC -o CMakeFiles/white-noise-module-rtxi.dir/white-noise-module-rtxi.cpp.o -c /home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/white-noise-module-rtxi/white-noise-module-rtxi.cpp",
+  "file": "/home/seregioo/Desktop/cositas/uni/5o/aec-for-rtxi/rtxi3/white-noise-module-rtxi/white-noise-module-rtxi.cpp",
+  "output": "white-noise-module-rtxi/CMakeFiles/white-noise-module-rtxi.dir/white-noise-module-rtxi.cpp.o"
+}
+]
